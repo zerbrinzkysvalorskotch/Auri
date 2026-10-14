@@ -348,11 +348,6 @@ a:focus-visible, button:focus-visible {
   :root {
     --teks-menu: 14px;
     --teks-bilah: 12px;
-     /* --- Ukuran bagian Taksa --- */
-  --taksa-lingkaran: clamp(140px, 19vw, 260px);   /* desain asli 260px */
-  --teks-taksa-judul: clamp(26px, 2.93vw, 40px);  /* desain asli 40px */
-  --teks-taksa-nama:  clamp(20px, 2.56vw, 35px);  /* desain asli 35px */
-  --teks-taksa-desk:  clamp(14px, 1.61vw, 22px);  /* desain asli 22px */
   }
 
   .navbar__menu { gap: 14px; }
@@ -372,64 +367,4 @@ a:focus-visible, button:focus-visible {
 /* Hormati pengguna yang mematikan animasi di perangkatnya */
 @media (prefers-reduced-motion: reduce) {
   .carousel__dot { transition: none; }
-}
-/* =========================================================
-   7. TAKSA
-   ========================================================= */
-.taksa {
-  background: var(--warna-putih);
-  padding: clamp(24px, 4vw, 56px) clamp(20px, 3.8vw, 52px) clamp(32px, 5vw, 72px);
-}
-
-.taksa__judul {
-  font-size: var(--teks-taksa-judul);
-  font-weight: 600;                       /* Cetak Semitebal */
-}
-
-/* Tiga kolom sama lebar */
-.taksa__daftar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 3vw, 48px);
-  margin-top: clamp(16px, 2.5vw, 36px);
-}
-
-/* Satu kartu = satu tombol (lingkaran + judul + deskripsi) */
-.taksa__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.2s;
-}
-.taksa__item:hover { transform: translateY(-4px); }
-
-.taksa__gambar {
-  width: var(--taksa-lingkaran);
-  height: var(--taksa-lingkaran);
-  border-radius: 50%;                     /* memotong gambar jadi lingkaran */
-  object-fit: cover;
-}
-
-.taksa__nama {
-  margin-top: 0.3em;
-  font-size: var(--teks-taksa-nama);
-  font-weight: 500;                       /* Cetak Sedang */
-  line-height: 1.2;
-}
-.taksa__item:hover .taksa__nama { text-decoration: underline; text-underline-offset: 6px; }
-
-.taksa__deskripsi {
-  margin-top: 0.4em;
-  max-width: 14em;                        /* supaya turun baris rapi seperti desain */
-  font-size: var(--teks-taksa-desk);
-  font-weight: 400;                       /* Cetak Reguler */
-  line-height: 1.25;
-}
-
-/* Layar kecil: tiga kolom jadi bertumpuk */
-@media (max-width: 800px) {
-  .taksa__daftar { grid-template-columns: 1fr; gap: 32px; }
-  .taksa__nama { font-size: 24px; }
-  .taksa__deskripsi { font-size: 16px; }
 }
