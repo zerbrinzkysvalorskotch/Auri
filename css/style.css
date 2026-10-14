@@ -45,7 +45,7 @@
   --bilah-tinggi: clamp(36px, 5.5vh, 55px);
 
   /* --- Ukuran teks --- */
-  --teks-menu:  clamp(16px, 1.83vw, 25px);   /* desain asli 25px */
+  --teks-menu:  clamp(13px, 1.45vw, 20px);
   --teks-bilah: clamp(11px, 1.1vw, 15px);    /* desain asli 15px */
   --teks-judul: clamp(26px, min(3.66vw, 8vh), 56px);  /* desain asli 50px */
   --teks-tombol: clamp(13px, min(1.46vw, 2.9vh), 20px); /* desain asli 20px */
